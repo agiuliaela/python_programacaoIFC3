@@ -13,6 +13,8 @@ def listar_pessoas():
     # aplicar o método json que a classe Pessoa possui a cada elemento da lista
     pessoas_em_json = [ x.json() for x in pessoas ]
     # fornecer a lista de pessoas em formato json
-    return jsonify(pessoas_em_json)
+    resposta  = jsonify(pessoas_em_json)
+    resposta.headers.add("Access-Control-Allow-Origin", "*")
+    return resposta
 
 app.run(debug=True)

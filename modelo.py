@@ -30,9 +30,9 @@ if __name__ == "__main__":
     db.create_all()
 
     # teste da classe Pessoa
-    p1 = Pessoa(nome = "João da Silva", email = "josilva@gmail.com", 
+    p1 = Pessoa(nome = "Dilvar Moreira", email = "dilmor@gmail.com", 
         telefone = "47 99012 3232")
-    p2 = Pessoa(nome = "Maria Oliveira", email = "molive@gmail.com", 
+    p2 = Pessoa(nome = "Giuliette da Silva Moreira", email = "giu_lette@gmail.com", 
         telefone = "47 98822 2531")        
     
     # persistir
@@ -41,7 +41,7 @@ if __name__ == "__main__":
     db.session.commit()
     
     # exibir a pessoa
-    print(p2)
+    print(p1)
 
     # exibir a pessoa no format json
     print(p2.json())
